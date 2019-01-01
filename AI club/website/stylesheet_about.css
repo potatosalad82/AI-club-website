@@ -1,0 +1,174 @@
+ body{
+height: 100%;
+margin: 0; 
+padding:0;
+color:rgb(51, 51, 51);
+font-weight:bold;
+font-size:20 px;
+font-family: Arial, Helvetica, sans-serif;
+background-image: url("img/background_4.jpg");
+background-repeat: repeat;
+
+
+    
+ /* makes image scale to scr width */
+}
+
+.header {
+    padding:0px;
+    margin-top:0px;
+    text-align: center;
+    background-image: url("img/logo_2.png");
+	
+	background-size: 100% 100%;
+	
+	
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: -webkit-sticky ; /* Safari */
+    position: sticky;
+    top: 0;
+    box-shadow: 1px 1px 15px lightBlue; /* glow */
+}
+/* Style the top navigation bar */
+.topnav {
+overflow: hidden;
+background-color: rgba(51, 51, 51, 0.99); /* last arg = transparancy */
+
+position: -webkit-sticky; /* Safari */
+position: sticky;
+width: 100%; /* Full width */
+}
+
+.topnav a {
+float: left;
+color: #f2f2f2;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+font-size: 17px;
+font-family: Arial;
+font-weight: normal;
+
+}
+
+.topnav a:hover {
+background-color: #ddd;
+color: black;
+}
+
+.topnav a.active {
+background-color: grey;			
+color: white;
+}
+img.sticky {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+}
+
+img {
+	display: block /* TEST: removes pixels below header */
+}
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 8px;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+.card {
+background-color: white;	
+  box-shadow:  4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding:16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+#fakeimg {
+  display: inline/* TEST: removes pixels below header */
+}
+.footer {
+color: white;
+margin-left: 10px;
+margin-right: 10px;
+    padding: 20px;
+    text-align: center;
+    background:black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 1px 1px 30px lightBlue;
+}
+/* unvisited link */
+a:link {
+    color: white;
+}
+
+/* visited link */
+a:visited {
+    color: white;
+}
+
+/* mouse over link */
+a:hover {
+    color: lightBlue;
+}
+
+/* selected link */
+a:active {
+    color: blue;
+}
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+    .topnav a {
+        float: none;
+        width: 100%;
+    }
+}

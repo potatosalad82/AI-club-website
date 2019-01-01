@@ -1,0 +1,203 @@
+
+* {
+    box-sizing: border-box;
+}
+.header {
+    padding:0px;
+    margin-top:0px;
+    text-align: center;
+    background-image: url("img/logo_2.png");
+	
+	background-size: 100% 100%;
+	
+	
+}
+body {
+    font-family: Arial;
+    margin:0;
+    background-image: url("img/background_4.jpg");
+	color:white;
+	background-repeat: repeat;
+
+
+}
+
+
+
+
+.header h1 {
+    font-size: 50px;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: -webkit-sticky ; /* Safari */
+    position: sticky;
+    top: 0;
+    box-shadow: 1px 1px 15px lightBlue; /* glow */
+}
+/* Style the top navigation bar */
+.topnav {
+overflow: hidden;
+background-color: rgba(51, 51, 51, 0.99); /* last arg = transparancy */
+
+position: -webkit-sticky; /* Safari */
+position: sticky;
+width: 100%; /* Full width */
+}
+
+.topnav a {
+float: left;
+color: #f2f2f2;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+font-size: 17px;
+
+
+}
+
+.topnav a:hover {
+background-color: #ddd;
+color: black;
+}
+
+.topnav a.active {
+background-color: grey;			
+color: white;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+    float: left;
+    width: 75%;
+    
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+/* Right column */
+.rightcolumn {
+padding: 10px;
+    float: left;
+    width: 25%;
+  
+	padding-right: 20px;
+    padding-left: 20px;
+}
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+    font-size:70px;
+}
+
+.bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+}
+.bottom-left2 {
+    position: absolute;
+    bottom: 90px;
+    left: 16px;
+}
+
+.top-left {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+}
+
+.top-right {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+}
+
+.bottom-right {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* Fake image */
+#fakeimg {
+    
+    width: 100%;
+    padding: 2px;
+}
+
+/* Add a card effect for articles */
+.card {
+margin-left: 10px;
+margin-right: 10px;
+    background:black;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 1px 1px 30px lightBlue; /* glow */
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Footer */
+.footer {
+margin-left: 10px;
+margin-right: 10px;
+    padding: 20px;
+    text-align: center;
+    background:black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 1px 1px 30px lightBlue;
+}
+/* unvisited link */
+a:link {
+    color: white;
+}
+
+/* visited link */
+a:visited {
+    color: white;
+}
+
+/* mouse over link */
+a:hover {
+    color: lightBlue;
+}
+
+/* selected link */
+a:active {
+    color: blue;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+        width: 100%;
+        padding: 0;
+    }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+    .topnav a {
+        float: none;
+        width: 100%;
+    }
+}

@@ -1,0 +1,180 @@
+<!-- put forward and back buttons in footer-->
+<!DOCTYPE html>
+	
+	<head>
+		<title>Home</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,height=device-height, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="stylesheet_documents.css">
+	</head>
+
+	<body>
+		<div class="header"style="height:190px;"></div>
+
+		<ul>
+			<div class="topnav">
+			  <a href="home_page.html">Home</a>
+			  <a href="MissonStatement.html">Misson Statement</a>
+			  <a href="About.html">About</a>
+			  <a href="Voice.html">Voice</a>
+			  <a href="Development.html">Development</a>
+			  <a href="E-Board.html">E-Board</a>
+			  <a class="aactive" href="Documents.html">Documents</a>
+			  <a href="https://github.com/Cpp-Ai-Project/DevelopmentProjectF18/tree/master">GitHub</a> 
+			  <a href="Contacts.html">Contacts</a>
+			  <a href="Events.html">Events</a>
+			  <a href="Sponsors.html">Sponsors</a>
+			</div>
+		</ul>
+
+		<div class="main">
+			<div class="footer">
+				<h2>documents</h2>
+				<h3>Find the files that you want below</h3>
+					<p>
+						NOTE: when you click on the download button it will begin downloading if it doesn't thats a problem with your computer or settings
+					</p>
+			</div>
+			
+			<div id="myBtnContainer" style="margin-left:10px">
+				<button class="btn active" onclick="filterSelection('all')"> Show all</button>
+				<button class="btn" onclick="filterSelection('development')">Development Team</button>
+				<button class="btn" onclick="filterSelection('voice')">Voice Team</button>
+				<button class="btn" onclick="filterSelection('download')">Downloadable</button>
+				<button class="btn" onclick="filterSelection('links')">Links</button>
+			</div>
+
+			<!-- Game Gallery Grid -->
+			<div class="row">
+				<div class="column development">
+					<div class="content">
+						<img id="MyImg" width =205px height=150px src="img/file_img.png" alt="Java1" >
+						<h3>Merge sort code</h3>
+						<h4>click image for more info</h4>
+						<a href="https://colab.research.google.com/drive/1562e9H_aIq2qRRwpFjiJutuEj1dQIHfT" target="_blank">
+							<img src="img/download_button.png" alt="Start" style="width:100%;height:52px;border:0">
+						</a>
+
+						<!-- The Modal -->
+						<div id="myModal" class="modal">
+
+						<!-- Modal content -->
+							<div class="modal-content">
+								<span class="close">&times;</span>
+								<h4>Description</h4>
+									<p>
+										Link to the merge sort code
+									</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="column development links">
+					<div class="content">
+						<img id="MyImg2" width =205px height=150px src="img/file_img.png" alt="Java1" >
+						<h3>Meeting 5 Slides</h3>
+						<h4>click image for more info</h4>
+						<a href="https://tinyurl.com/ydbxrl7c" target="_blank">
+							<img src="img/download_button.png" alt="Start" style="width:100%;height:52px;border:0">
+						</a>
+
+						<!-- The Modal -->
+						<div id="myModal2" class="modal">
+
+						<!-- Modal content -->
+							<div class="modal-content">
+								<span class="close">&times;</span>
+								<h4>Description</h4>
+									<p>
+										Workshop 5 slides
+									</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+				<script>
+								filterSelection("all")
+								function filterSelection(c) {
+								  var x, i;
+								  x = document.getElementsByClassName("column");
+								  if (c == "all") c = "";
+								  for (i = 0; i < x.length; i++) {
+									w3RemoveClass(x[i], "show");
+									if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+								  }
+								}
+
+								function w3AddClass(element, name) {
+								  var i, arr1, arr2;
+								  arr1 = element.className.split(" ");
+								  arr2 = name.split(" ");
+								  for (i = 0; i < arr2.length; i++) {
+									if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+								  }
+								}
+
+								function w3RemoveClass(element, name) {
+								  var i, arr1, arr2;
+								  arr1 = element.className.split(" ");
+								  arr2 = name.split(" ");
+								  for (i = 0; i < arr2.length; i++) {
+									while (arr1.indexOf(arr2[i]) > -1) {
+									  arr1.splice(arr1.indexOf(arr2[i]), 1);     
+									}
+								  }
+								  element.className = arr1.join(" ");
+								}
+
+
+								// Add active class to the current button (highlight it)
+
+								var btnContainer = document.getElementById("myBtnContainer");
+								var btns = btnContainer.getElementsByClassName("btn");
+								for (var i = 0; i < btns.length; i++) {
+								  btns[i].addEventListener("click", function(){
+									var current = document.getElementsByClassName("active");
+									current[0].className = current[0].className.replace("active", "");
+									this.className += " active";
+								  });
+								}
+
+								// Get the modal
+								var modal = document.getElementById('myModal');
+								var abtn = document.getElementById("MyImg");
+								var span = document.getElementsByClassName("close")[0];
+								abtn.onclick = function() {
+									modal.style.display = "block";
+								}
+								span.onclick = function() {
+									modal.style.display = "none";
+									
+								}
+								
+								var modal2 = document.getElementById('myModal2');
+								var abtn2 = document.getElementById("MyImg2");
+								var span2 = document.getElementsByClassName("close")[1];
+								abtn2.onclick = function() {
+									modal2.style.display = "block";
+								}
+								span2.onclick = function() {
+									modal2.style.display = "none";
+									
+								}
+								
+								window.onclick = function(event) {
+									if (event.target == modal) {
+										modal.style.display = "none";
+									}
+									if (event.target == modal2) {
+										modal2.style.display = "none";
+										}
+								}
+										
+				</script>
+				<div class="footer">
+					<h2>Brought to you by: Potato Industries</h2>
+					<p><b><a href="http://PotatoLabs.org/" target="_blank">PotatoLabs.org</a></b></p>
+				</div> 
+			</body>
+		</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+	
+	<head>
+		<title>AI Club - Homepage</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="stylesheet_homepage.css" >
+	</head>
+
+	<body>
+		<div class="header"style="height:190px;">
+		
+</div>
+
+<ul>
+<div class="topnav">
+  <a href="home_page.html">Home</a>
+  <a href="MissonStatement.html">Misson Statement</a>
+  <a href="About.html">About</a>
+  <a href="Voice.html">Voice</a>
+  <a href="Development.html">Development</a>
+  <a href="E-Board.html">E-Board</a>
+  <a href="Documents.html">Documents</a>
+  <a href="https://github.com/Cpp-Ai-Project/DevelopmentProjectF18/tree/master">GitHub</a> 
+  <a href="Contacts.html">Contacts</a>
+  <a class="active" href="Events.html">Events</a>
+  <a href="Sponsors.html">Sponsors</a>
+
+</div>
+</ul>
+<div class="row">
+	   <div class="card">
+      <h2>Next Event</h2>
+      <h5>July 17, 2018</h5>
+      <p>
+		  Event in the quad u-hour with Batman bring your friends free food. Going to learn about new ai system for the bat mobile.
+      </p>
+      <p id="update_clock" style="font-size:30px"></p>
+    </div>
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>First Ai assistant Set to Be Released Next Month</h2>
+      <h5>Annoucing module JAVA_1, July 17, 2018</h5>
+      <img id="fakeimg" height=550px src="img/batman.jpg">
+      <p>
+		  Event in the quad u-hour with Batman bring your friends free food. Going to learn about new ai system for the bat mobile.
+      </p>
+      <p id="update_clock" style="font-size:30px"></p>
+			
+						
+      <p>
+		  END_GAME 
+      </p>
+    </div>
+    <div class="card">
+      <h2>Qwack</h2>
+      <h5>Launch, July 7, 2018</h5>
+      <img id="fakeimg" height=400px src="img/filler_image_2.jpg" >
+      <p>
+			Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to 
+			interest me on shore, I thought I would sail about a little and see the watery part of the world. It is a way I have of driving
+			off the spleen and regulating the circulation. Whenever I find myself growing grim about the mouth; whenever it is a damp, 
+			drizzly November in my soul; whenever I find myself involuntarily pausing before coffin warehouses, and bringing up the rear of
+			every funeral I meet; and especially whenever my hypos get such an upper hand of me, that it requires a strong moral principle
+			to prevent me from deliberately stepping into the street, and methodically knocking people’s hats off—then, I account it 
+			high time to get to sea as soon as I can. This is my substitute for pistol and ball. With a philosophical flourish Cato 
+			throws himself upon his sword; I quietly take to the ship. There is nothing surprising in this. If they but knew it, almost all 
+			men in their degree, some time or other, cherish very nearly the same feelings towards the ocean with me.
+      </p>
+      <p>
+		  Please enjoy this website and if you have any suggestions about content or even if you just want to talk visit our contact page and send us an email. 
+		  
+      </p>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>Club meeting times</h2>
+      <img id="fakeimg" height=200px src="img/time_filler_art.png">
+      <p>The club meets on Tuesdays and Thursdays at 12-1 for development team</p>
+      <p>The club meets on Tuesdays and Thursdays at 12-1 for Voice Assistant team</p>
+      <h4>potatoindustriesofficial@gmail.com</h4>
+    </div>
+    <div class="card">
+      <h3>Meeting Resources</h3>
+      <a href="java1.html">
+		  <div class="fakeimg"><p>Slides</p></div>
+      </a>
+      <a href="java1.html">
+		  <div class="fakeimg"><p>Links</p></div>
+      </a>
+      <a href="java1.html">
+		  <div class="fakeimg"><p>News</p></div>
+      </a>
+      
+      
+    </div>
+    <div class="card">
+      <h3>Other social</h3>
+      <p>Our YouTube Channel:</p>
+      <p><b><a href="https://www.youtube.com/channel/UCTznC8tVfwlJ0SS5fFZ2UPA?view_as=public" target="_blank">Youtube Link</a></b></p>
+      <p>Game Website by us:</p>
+      <p><b><a href="http://gameportals.org/" target="_blank">GamePortals.org</a></b></p>
+      
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <h2>Brought to you by: Potato Industries</h2>
+	      <p><b><a href="http://PotatoLabs.org/" target="_blank">PotatoLabs.org</a></b></p>
+	       <img height=80px src="img/logo.png">
+	      
+
+</div>
+		
+			
+<script>
+	// Set the date we're counting down to
+	var countDownDate = new Date("November 20, 2019 23:00:01").getTime();
+
+	// Update the count down every 1 second
+	var countdownfunction = setInterval(function()
+	 {
+
+		// Get todays date and time
+		var now = new Date().getTime();
+	
+		// Find the distance between now an the count down date
+		var distance = countDownDate - now;
+		
+		// Time calculations for days, hours, minutes and seconds
+		var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+		var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+		var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+		var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+		
+		// Output the result in an element with id="update_clock"
+		document.getElementById("update_clock").innerHTML = days + "d " + hours + "h "
+		+ minutes + "m " + seconds + "s ";
+		
+		// If the count down is over, write some text 
+		if (distance < 0)
+		 {
+			clearInterval(countdownfunction);
+			document.getElementById("update_clock").innerHTML = "Please come to event";
+		 }
+	 }, 1000);
+</script>
+	</body>
+
+</html>
